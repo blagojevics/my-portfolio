@@ -1,26 +1,36 @@
-### **Portfolio Design Blueprint (Conceptual Figma File)**
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-#### **1. Color Palette**
+## Getting Started
 
-- **Primary Background:** `#121212` (Dark Black)
-- **Text Color:** `#e0e0e0` (Off-white)
-- **Accent Color:** `#00aaff` (Vibrant Sky Blue)
+First, run the development server:
 
-#### **2. Typography**
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- **Headings (h1, h2, etc.):** A modern sans-serif font like `Poppins` or `Montserrat` (Bold weight).
-- **Body Text (p, a):** A highly readable sans-serif font like `Roboto` or `Inter` (Regular weight).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-#### **3. High-Level Layout**
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- **Structure:** A single, vertically-scrolling page with clear, defined sections.
-- **Spacing:** Use generous padding (`p-16`) and margins (`mb-10`) to give the sections plenty of white space.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-#### **4. Section Breakdowns**
+## Learn More
 
-- **Hero Section:** A simple, centered section with your name, title, and a one-sentence tagline. The goal is to make a strong first impression.
-- **Projects Section:** A responsive grid that displays your projects. Each project card should have a clear image, the project title, and a brief description. The links to the live site and GitHub should be prominent.
-- **Skills Section:** A simple, horizontal row of "pills" or "badges" that list your skills. Use the accent color to highlight them.
-- **Contact Section:** A simple footer with your email, GitHub, and LinkedIn links.
+To learn more about Next.js, take a look at the following resources:
 
-This blueprint gives you a clear vision to work towards. You've already got the engine running; now you just need to follow the blueprint and start building.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

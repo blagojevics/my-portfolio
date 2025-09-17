@@ -1,5 +1,6 @@
 import Header from "../components/Header";
-import ProjectsSection from "@/components/ProjectsSection";
+import ProjectsSection from "../components/projects/ProjectsSection";
+import Techstack from "../components/techstack/Techstack";
 import React from "react";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <Header />
       <ProjectsSection />
+      <Techstack />
     </div>
   );
 }

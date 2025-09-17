@@ -21,7 +21,7 @@ export default function Header() {
             Projects
           </a>
           <a
-            href="#tech-stack"
+            href="#techstack"
             className="text-sm hover:text-primary transition-colors"
           >
             Tech Stack

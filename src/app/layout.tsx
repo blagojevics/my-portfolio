@@ -27,10 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Provider>
-          <ThemeSwitcher /> {/* Add ThemeSwitcher */}
-          {children}
-        </Provider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

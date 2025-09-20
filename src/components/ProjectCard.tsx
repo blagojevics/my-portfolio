@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -11,58 +13,87 @@ type Project = {
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const handleClick = (url: string | undefined) => {
+    if (url) {
+      window.open(url, "_blank");
+    } else {
+      console.error("No URL provided for project:", project.title);
+    }
+  };
+
   return (
-    <div className="group bg-[var(--background-color)] rounded-xl border border-[var(--text-color)] overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
-      <div className="aspect-video overflow-hidden relative">
+    <div className="bg-[var(--card-background-color)] rounded-xl border border-[var(--card-background-color)] overflow-hidden shadow hover:shadow-md transition flex flex-col cursor-pointer">
+      {/* Image wrapper */}
+      <div
+        onClick={() => handleClick(project.liveUrl || project.githubUrl)}
+        className="relative group cursor-pointer aspect-video"
+      >
+        {/* Clickable image */}
         <img
           src={project.image}
-          alt={`Screenshot of the ${project.title} project`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-t-xl"
+          alt={`Screenshot of ${project.title}`}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
+
+        {/* Shading overlay */}
+        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+        {/* Hover buttons */}
+        <div
+          className="
+            absolute bottom-3 left-3 flex gap-2
+            opacity-0 transform translate-y-2
+            group-hover:opacity-100 group-hover:translate-y-0
+            transition-all duration-300 ease-out
+          "
+        >
+          {project.liveUrl && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleClick(project.liveUrl);
+              }}
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-md text-xs font-medium bg-[var(--item-background-color)] text-[var(--text-color)] hover:bg-[var(--gradient-color)] hover:text-white transition"
+            >
+              <ExternalLink className="w-3.5 h-3.5" />
+              Demo
+            </button>
+          )}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleClick(project.githubUrl);
+            }}
+            className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-md text-xs font-medium bg-[var(--item-background-color)] text-[var(--text-color)] hover:bg-[var(--gradient-color)] hover:text-white transition"
+          >
+            <Github className="w-3.5 h-3.5" />
+            Code
+          </button>
+        </div>
       </div>
 
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-2xl font-bold mb-3 text-[var(--text-color)]">
+      {/* Content */}
+      <div className="p-5 flex flex-col flex-grow">
+        {/* Title */}
+        <h3 className="text-lg font-semibold text-[var(--text-color)] mb-2">
           {project.title}
         </h3>
-        <p className="text-[var(--text-color)] mb-4">{project.description}</p>
 
-        <div className="flex flex-wrap gap-3 mb-6">
+        {/* Description */}
+        <p className="text-sm text-[var(--text-color)] mb-4">
+          {project.description}
+        </p>
+
+        {/* Tech stack tags */}
+        <div className="flex flex-wrap gap-2 mt-auto">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="bg-[var(--background-color)] text-[var(--text-color)] text-sm font-medium px-3 py-1 rounded-full shadow-md hover:bg-indigo-600 hover:text-white transition-colors duration-300"
+              className="bg-[var(--item-background-color)] text-[var(--text-color)] text-xs font-medium px-2 py-1 rounded hover:bg-[var(--gradient-color)] hover:text-white transition"
             >
               {tech}
             </span>
           ))}
-        </div>
-
-        <div className="flex justify-center gap-4 mt-auto pt-4 border-t border-[var(--text-color)]">
-          {project.liveUrl && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1"
-            >
-              <button className="w-full inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors border border-[var(--text-color)] bg-[var(--background-color)] hover:bg-indigo-600 hover:text-white h-12 py-2 px-4">
-                <ExternalLink className="w-5 h-5 mr-2" />
-                Live Demo
-              </button>
-            </a>
-          )}
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1"
-          >
-            <button className="w-full inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors border border-[var(--text-color)] bg-[var(--background-color)] hover:bg-indigo-600 hover:text-white h-12 py-2 px-4">
-              <Github className="w-5 h-5 mr-2" />
-              Code
-            </button>
-          </a>
         </div>
       </div>
     </div>

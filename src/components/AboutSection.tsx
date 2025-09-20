@@ -10,12 +10,14 @@ export default function AboutSection() {
             <div>
               <h1 className="text-4xl font-extrabold text-[var(--text-color)] mb-6">
                 Hi, I'm{" "}
-                <span className="text-indigo-600">Stefan Blagojević</span>
+                <span className="text-[var(--gradient-color)]">
+                  Stefan Blagojević
+                </span>
               </h1>
               <h2 className="text-2xl font-semibold text-[var(--text-color)] mb-6">
                 Frontend Developer
               </h2>
-              <p className="text-lg text-[var(--text-color)] mb-6 leading-relaxed">
+              <p className="text-lg text-[var(--text-color)] mb-6 leading-relaxed text-justify">
                 My journey into web development started with a practical desire:
                 to build applications that I could use with my friends. This
                 hobby grew into a deep interest in crafting seamless digital

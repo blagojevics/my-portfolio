@@ -3,14 +3,14 @@ import projectsData from "@/data/projectsData";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900/50">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+            <h2 className="text-3xl font-bold mb-4 text-[var(--text-color)]">
               Featured Projects
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[var(--text-color)] max-w-2xl mx-auto">
               Here are some of my recent projects that showcase my skills in web
               development, design, and problem-solving. Each project represents
               a unique challenge and learning experience.

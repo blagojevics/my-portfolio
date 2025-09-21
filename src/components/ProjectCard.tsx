@@ -75,12 +75,12 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Content */}
       <div className="p-5 flex flex-col flex-grow">
         {/* Title */}
-        <h3 className="text-lg font-semibold text-[var(--text-color)] mb-2">
+        <h3 className="text-lg font-semibold text-[#d7d7d7] mb-2 cursor-default">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-[var(--text-color)] mb-4">
+        <p className="text-m text-[#b5b5b5] mb-4 cursor-default">
           {project.description}
         </p>
 
@@ -89,7 +89,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="bg-[var(--item-background-color)] text-[var(--text-color)] text-xs font-medium px-2 py-1 rounded hover:bg-[var(--gradient-color)] hover:text-white transition"
+              className="bg-[var(--item-background-color)] text-[#c4c4c4] text-xs font-small px-2 py-1 rounded hover:bg-[#333] hover:text-white transition"
             >
               {tech}
             </span>

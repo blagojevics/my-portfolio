@@ -7,7 +7,7 @@ export function Footer() {
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-semibold mb-4">Contact</h3>
           <p className="text-muted-foreground mb-8">
-            Interested in working together? Let's connect.
+            Open to new opportunities and conversations.
           </p>
 
           <div className="flex justify-center gap-6 mb-8">
@@ -15,7 +15,7 @@ export function Footer() {
               href="mailto:your.email@example.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground transition-colors hover:text-[#00BFFF] "
             >
               <Mail size={28} />
             </a>
@@ -23,7 +23,7 @@ export function Footer() {
               href="https://github.com/blagojevics"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground transition-colors hover:text-[#807171] "
             >
               <Github size={28} />
             </a>
@@ -31,7 +31,7 @@ export function Footer() {
               href="https://www.linkedin.com/in/stefan-blagojevic-16455a385/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground transition-colors hover:text-[#0072b1] "
             >
               <Linkedin size={28} />
             </a>

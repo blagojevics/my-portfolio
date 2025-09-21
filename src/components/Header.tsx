@@ -23,9 +23,6 @@ export default function Header() {
   return (
     <>
       {/* Theme Switcher outside the header */}
-      <div className="absolute top-4 right-4">
-        <ThemeSwitcher />
-      </div>
 
       <header className="z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -42,28 +39,29 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-6 font-semibold">
             <a
               href="#about"
-              className="text-sm hover:text-primary transition-colors"
+              className="text-m hover:text-primary transition-colors"
             >
               About
             </a>
             <a
               href="#projects"
-              className="text-sm hover:text-primary transition-colors"
+              className="text-m hover:text-primary transition-colors"
             >
               Projects
             </a>
             <a
               href="#techstack"
-              className="text-sm hover:text-primary transition-colors"
+              className="text-m hover:text-primary transition-colors"
             >
               Tech Stack
             </a>
             <a
               href="#footer"
-              className="text-sm hover:text-primary transition-colors"
+              className="text-m hover:text-primary transition-colors"
             >
               Contact
             </a>
+            <ThemeSwitcher />
           </nav>
         </div>
       </header>

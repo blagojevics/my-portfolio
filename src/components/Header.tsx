@@ -1,15 +1,22 @@
 "use client";
 
 import AboutSection from "./AboutSection";
+
 import logoImgBlack from "../assets/logoblack.png";
+
 import logoImgWhite from "../assets/logowhite.png";
+
 import Image from "next/image";
+
 import { useTheme } from "next-themes";
+
 import { useEffect, useState } from "react";
+
 import ThemeSwitcher from "../app/themeSwitcher";
 
 export default function Header() {
   const { theme } = useTheme();
+
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -36,6 +43,7 @@ export default function Header() {
               />
             </a>
           </div>
+
           <nav className="hidden md:flex items-center space-x-6 font-semibold">
             <a
               href="#about"
@@ -43,24 +51,28 @@ export default function Header() {
             >
               About
             </a>
+
             <a
               href="#projects"
               className="text-m hover:text-primary transition-colors"
             >
               Projects
             </a>
+
             <a
               href="#techstack"
               className="text-m hover:text-primary transition-colors"
             >
               Tech Stack
             </a>
+
             <a
               href="#footer"
               className="text-m hover:text-primary transition-colors"
             >
               Contact
             </a>
+
             <ThemeSwitcher />
           </nav>
         </div>

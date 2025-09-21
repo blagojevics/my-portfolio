@@ -8,9 +8,11 @@
   --secondary: #74a9e5;
   --secondary-foreground: #ffffff;
   --background-color: #e1e1e1; /* Light background */
-  --card-background-color: #d6d6d6; /* Slightly darker card background */
-  --item-background-color: #cfcfcf; /* Even darker item background */
-  --text-color: #000000;
+  --card-background-color: #f5f5f5; /* Brighter card background for light mode */
+  --item-background-color: #ffffff; /* Brightest item background for light mode */
+  --text-color: #242424; /* Fully black text for light mode */
+  --description-light-color: #333333; /* Slightly lighter black for descriptions */
+  --description-dark-color: #e0e0e0; /* Milder white for descriptions */
   --gradient-color: linear-gradient(90deg, #2c3e50, #3498db);
 }
 
@@ -19,6 +21,8 @@ html.dark {
   --card-background-color: #1f1f1f; /* Slightly lighter card background */
   --item-background-color: #252525; /* Even lighter item background */
   --text-color: #f5f5f5; /* Lighter text */
+  --description-light-color: #b5b5b5; /* Milder white for descriptions */
+  --description-dark-color: #e0e0e0; /* Milder white for descriptions */
   --gradient-color: linear-gradient(
     90deg,
     #ff7e5f,
@@ -48,17 +52,10 @@ button {
   width: 100%;
 }
 
-@media screen and (min-width: 280px) and (max-width: 500px) {
-  body {
-    min-width: 280px;
-    max-width: 500px;
-  }
-}
-
 /* Merged dark mode styles */
 html.dark {
   --background-color: #171717; /* Darker background */
-  --text-color: #f5f5f5; /* Lighter text */
+  --text-color: #dddddd; /* Lighter text */
   --gradient-color: linear-gradient(
     90deg,
     #ff7e5f,
@@ -68,11 +65,42 @@ html.dark {
 
 /* Adjusted hover effects for dark mode */
 .card {
-  background-color: var(--background-color);
-  border: 1px solid var(--background-color);
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
+  background-color: var(--card-background-color);
+  border: 1px solid var(--item-background-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for light mode */
 }
 
 .card:hover {
-  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2); /* Stronger light shadow on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover for light mode */
+}
+
+@media screen and (min-width: 280px) and (max-width: 400px) {
+  main {
+    margin: 0 auto;
+    min-width: 280px;
+    max-width: 500px;
+    width: 250px;
+  }
+  body {
+    min-width: 280px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #section {
+    display: flex;
+    max-width: 500px;
+    min-width: 280px;
+  }
+
+  #projects {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .footerClass {
+    width: 250px;
+  }
 }

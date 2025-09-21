@@ -1,3 +1,4 @@
+"use client";
 import ProjectCard from "./ProjectCard";
 import projectsData from "@/data/projectsData";
 
@@ -6,7 +7,9 @@ export default function ProjectsSection() {
     <section id="projects" className="py-0">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
+            {" "}
+            {/* Slightly less margin on mobile */}
             <h2 className="text-3xl font-bold mb-4 text-[var(--text-color)]">
               Featured Projects
             </h2>
@@ -17,13 +20,23 @@ export default function ProjectsSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* CHANGE: Reduced gap for mobile, original gap for medium screens and up */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {projectsData.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </div>
         </div>
       </div>
+      <style jsx>{`
+        @media screen and (min-width: 280px) and (max-width: 500px) {
+          #about p {
+            max-width: 250px;
+            margin: 0 auto;
+            text-align: justify;
+          }
+        }
+      `}</style>
     </section>
   );
 }

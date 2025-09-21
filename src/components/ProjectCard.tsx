@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 type Project = {
   title: string;
@@ -22,16 +23,18 @@ export default function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <div className="bg-[var(--card-background-color)] rounded-xl border border-[var(--item-background-color)] overflow-hidden shadow hover:shadow-md transition flex flex-col">
-      {/* Image wrapper - No changes needed here */}
+    <div className="bg-[var(--card-background-color)] rounded-xl border border-[var(--item-background-color)] overflow-hidden shadow hover:shadow-md transition flex flex-col sm:max-w-2xs ">
+      {/* Image wrapper */}
       <div
         onClick={() => handleClick(project.liveUrl || project.githubUrl)}
         className="relative group cursor-pointer aspect-video"
       >
-        <img
+        <Image
           src={project.image}
           alt={`Screenshot of ${project.title}`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          layout="fill"
+          objectFit="cover"
+          className="group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div
@@ -68,16 +71,13 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       {/* Content */}
-      {/* CHANGE: Reduced padding for mobile, original padding for small screens and up */}
-      <div className="p-4 sm:p-5 flex flex-col flex-grow">
+      <div className="p-4 sm:p-3 flex flex-col flex-grow">
         {/* Title */}
-        {/* CHANGE: Smaller text for mobile, original size for small screens and up */}
         <h3 className="text-base sm:text-lg font-semibold text-[var(--text-color)] mb-2 cursor-default">
           {project.title}
         </h3>
 
         {/* Description */}
-        {/* CHANGE: Smaller text for mobile, original size for small screens and up */}
         <p className="text-sm sm:text-base text-[var(--text-color)] mb-4 cursor-default">
           {project.description}
         </p>

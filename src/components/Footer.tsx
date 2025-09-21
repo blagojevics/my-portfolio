@@ -47,8 +47,8 @@ export function Footer() {
       <style jsx>{`
         @media screen and (min-width: 280px) and (max-width: 500px) {
           #footer {
-            min-width: 280px;
-            width: 300px;
+            max-width: 500px;
+            width: 280px;
             margin: 0 auto;
             text-align: justify;
           }

@@ -74,7 +74,7 @@ html.dark {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover for light mode */
 }
 
-@media screen and (min-width: 280px) and (max-width: 400px) {
+@media screen and (min-width: 280px) and (max-width: 500px) {
   main {
     margin: 0 auto;
     min-width: 280px;
@@ -85,6 +85,7 @@ html.dark {
     min-width: 280px;
     max-width: 400px;
     margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   #section {
@@ -96,11 +97,23 @@ html.dark {
   #projects {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    min-width: 280px;
+    max-width: 400px;
     margin: 0 auto;
   }
 
   .footerClass {
     width: 250px;
+  }
+  #footer {
+    min-width: 280px;
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 400px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Ensure proper layout */
+    width: 100vw; /* Restrict width to viewport */
   }
 }

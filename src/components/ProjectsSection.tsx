@@ -4,8 +4,8 @@ import projectsData from "@/data/projectsData";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-0">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-0 m-auto">
+      <div className="container my-auto px-0">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             {" "}

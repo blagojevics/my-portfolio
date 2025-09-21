@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Provider from "./provider";
-import ThemeSwitcher from "./themeSwitcher"; // Import ThemeSwitcher
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import ThemeWrapper from "./themeWrapper";
 
 export const metadata: Metadata = {
   title: "Stefan Blagojević",
@@ -27,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Provider>{children}</Provider>
+        <Provider>
+          <ThemeWrapper>{children}</ThemeWrapper>
+        </Provider>
       </body>
     </html>
   );

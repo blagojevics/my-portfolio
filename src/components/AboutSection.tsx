@@ -11,27 +11,27 @@ export default function AboutSection() {
       <div className="container mx-auto px-6 sm:px-10 pb-3">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left Section: Name and Profession */}
-          <div className="flex flex-col ">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-[var(--text-color)] mb-4 flex gap-3 flex-col items-left sm:my-0 mx-auto">
-              Hi, I'm <br />
+          <div className="flex flex-col items-left gap-2.5 ">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-[var(--text-color)] mb-4 flex gap-3 flex-col items-left sm:my-0 ">
+              Hi, I&apos;m <br />
               <span className="text-[var(--gradient-color)]">Stefan</span>{" "}
               <span className="text-[var(--gradient-color)]">Blagojević</span>
             </h1>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-[var(--text-color)] mb-6 flex flex-col items-left sm:my-0 mx-auto">
+            <h2 className="text-[1.2rem] sm:text-2xl font-semibold text-[var(--text-color)] mb-6 flex flex-col items-left sm:my-0 ">
               Frontend Developer
-              <h3 className="text-lg font-semibold text-[var(--text-color)] mb-6 flex gap-1 ">
-                <FaMapMarkerAlt
-                  className="text-2xl "
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                />
-                Belgrade, Serbia
-              </h3>
             </h2>
+            <h3 className="text-lg font-semibold text-[var(--text-color)] mb-6 flex gap-1 ">
+              <FaMapMarkerAlt
+                className="text-2xl "
+                style={{
+                  background:
+                    "linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              />
+              Belgrade, Serbia
+            </h3>
           </div>
 
           {/* Right Section: About Me */}

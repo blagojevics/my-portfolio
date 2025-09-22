@@ -3,6 +3,37 @@ import techStackData from "@/data/techStackData";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { useState } from "react";
 
+function TechStackIcon({ item, isMobile }: { item: any; isMobile: boolean }) {
+  const [hovered, setHovered] = useState(false);
+
+  const iconColor = isMobile
+    ? item.hoverColor
+    : hovered
+    ? item.hoverColor
+    : "var(--text-color)";
+
+  return (
+    <div
+      className="flex flex-col items-center justify-center text-xs text-center 
+        bg-[var(--item-background-color)] 
+        p-3 sm:p-2 md:p-3 
+        rounded-lg shadow-md hover:shadow-lg 
+        transition-shadow duration-300
+        w-full"
+      onMouseEnter={!isMobile ? () => setHovered(true) : undefined}
+      onMouseLeave={!isMobile ? () => setHovered(false) : undefined}
+    >
+      <item.icon
+        className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] mb-1 md:mb-2 transition-colors duration-300"
+        style={{ color: iconColor }}
+      />
+      <span className="text-[11px] sm:text-xs md:text-sm font-medium text-[var(--text-color)]">
+        {item.name}
+      </span>
+    </div>
+  );
+}
+
 const TechStack = () => {
   const width = useWindowWidth();
   const isMobile = width !== null && width < 500;
@@ -34,43 +65,9 @@ const TechStack = () => {
               </h3>
             </div>
             <div className="grid grid-cols-2 gap-4 md:gap-6">
-              {category.items.map((item, j) => {
-                const [hovered, setHovered] = useState(false);
-
-                const iconColor = isMobile
-                  ? item.hoverColor
-                  : hovered
-                  ? item.hoverColor
-                  : "var(--text-color)";
-
-                return (
-                  <div
-                    key={j}
-                    className="flex flex-col items-center justify-center text-xs text-center 
-                      bg-[var(--item-background-color)] 
-                      p-3 sm:p-2 md:p-3 
-                      rounded-lg shadow-md hover:shadow-lg 
-                      transition-shadow duration-300
-                      w-full"
-                    onMouseEnter={
-                      !isMobile ? () => setHovered(true) : undefined
-                    }
-                    onMouseLeave={
-                      !isMobile ? () => setHovered(false) : undefined
-                    }
-                  >
-                    <item.icon
-                      className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] mb-1 md:mb-2 transition-colors duration-300"
-                      style={{
-                        color: iconColor,
-                      }}
-                    />
-                    <span className="text-[11px] sm:text-xs md:text-sm font-medium text-[var(--text-color)]">
-                      {item.name}
-                    </span>
-                  </div>
-                );
-              })}
+              {category.items.map((item, j) => (
+                <TechStackIcon key={j} item={item} isMobile={isMobile} />
+              ))}
             </div>
           </div>
         ))}

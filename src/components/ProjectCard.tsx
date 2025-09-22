@@ -78,7 +78,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         </h3>
 
         {/* Description */}
-        <p className="text-sm sm:text-base text-[var(--text-color)] mb-4 cursor-default flex text-center justify-items-center">
+        <p className=" text-justify text-sm sm:text-base text-[var(--text-color)] mb-4 cursor-default flex text-center justify-items-center">
           {project.description}
         </p>
 

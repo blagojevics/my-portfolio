@@ -1,4 +1,4 @@
-# 💼 Personal Portfolio - [Your Name]
+# 💼 Personal Portfolio - [Stefan Blagojević]
 
 This is my personal portfolio website built with **Next.js (App Router)** and **TypeScript**.  
 It showcases my projects, experience, and blog posts, and serves as a way to connect with me online.
@@ -17,8 +17,6 @@ It showcases my projects, experience, and blog posts, and serves as a way to con
 - 🗂 Projects section with live previews
 
 ---
-
-## 📂 Project Structure
 
 ## 📂 Project Structure
 

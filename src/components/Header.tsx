@@ -1,6 +1,5 @@
 "use client";
 
-import AboutSection from "./AboutSection";
 import logoImgBlack from "../assets/logoblack.png";
 import logoImgWhite from "../assets/logowhite.png";
 import Image from "next/image";

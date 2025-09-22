@@ -5,7 +5,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="w-full max-w-4xl mx-auto py-10 px-3 sm:px-6 flex flex-col bg-[var(--background-color)] transition-colors duration-300"
+      className="w-full max-w-4xl mx-auto py-10 px-0 sm:px-6 flex flex-col bg-[var(--background-color)] transition-colors duration-300"
     >
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         {/* Left: Name & Profession */}

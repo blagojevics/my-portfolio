@@ -79,7 +79,6 @@ html.dark {
     margin: 0 auto;
     min-width: 280px;
     max-width: 500px;
-    width: 250px;
   }
   body {
     min-width: 280px;
@@ -100,6 +99,8 @@ html.dark {
     min-width: 280px;
     max-width: 400px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .footerClass {

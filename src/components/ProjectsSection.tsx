@@ -13,7 +13,7 @@ export default function ProjectsSection() {
             <h2 className="text-3xl font-bold mb-4 text-[var(--text-color)]">
               Featured Projects
             </h2>
-            <p className="text-[var(--text-color)] max-w-2xl mx-auto">
+            <p className="text-[var(--text-color)] max-w-2xl mx-auto text-justify">
               Here are some of my recent projects that showcase my skills in web
               development, design, and problem-solving. Each project represents
               a unique challenge and learning experience.

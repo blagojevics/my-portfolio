@@ -73,12 +73,12 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Content */}
       <div className="p-4 sm:p-3 flex flex-col flex-grow">
         {/* Title */}
-        <h3 className="text-base sm:text-lg font-semibold text-[var(--text-color)] mb-2 cursor-default">
+        <h3 className="text-base sm:text-lg font-semibold text-[var(--text-color)] mb-2 cursor-default text-center">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm sm:text-base text-[var(--text-color)] mb-4 cursor-default">
+        <p className="text-sm sm:text-base text-[var(--text-color)] mb-4 cursor-default flex text-center justify-items-center">
           {project.description}
         </p>
 

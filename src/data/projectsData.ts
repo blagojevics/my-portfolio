@@ -31,7 +31,7 @@ const projectsData: Project[] = [
   {
     title: "Enigma Bolt System - Static Website",
     description:
-      "A fully responsive business website demonstrating foundational web development skills with a focus on semantic HTML and advanced CSS responsive layouts.",
+      "A fully responsive business website demonstrating foundational web development skills with a focus on semantic HTML and  CSS  layouts.",
     image:
       "https://res.cloudinary.com/deccntaym/image/upload/v1758043026/enigmaSSSS_ljzsyq.png",
     technologies: ["HTML", "CSS", "JavaScript"],

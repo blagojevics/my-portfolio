@@ -3,18 +3,18 @@
 This is my personal portfolio website built with **Next.js (App Router)** and **TypeScript**.  
 It showcases my projects, experience, and blog posts, and serves as a way to connect with me online.
 
-🚀 Deployed on [Vercel](https://vercel.com).
+ Deployed on [Vercel](https://vercel.com).
 
 ---
 
 ## ✨ Features
 
-- ⚡ Built with [Next.js](https://nextjs.org/) 15 + React 18
-- 📘 Written in **TypeScript** for type safety
-- 🎨 Styled with [Tailwind CSS](https://tailwindcss.com/)
-- 🌙 Light/Dark Mode support
-- 📱 Fully responsive design
-- 🗂 Projects section with live previews
+-  Built with [Next.js](https://nextjs.org/) 15 + React 18
+-  Written in **TypeScript** for type safety
+-  Styled with [Tailwind CSS](https://tailwindcss.com/)
+-  Light/Dark Mode support
+-  Fully responsive design
+-  Projects section with live previews
 
 ---
 
@@ -68,7 +68,7 @@ Visit [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 Deployed easily with [Vercel](https://vercel.com).
 

@@ -68,7 +68,7 @@ Visit [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 Deployed easily with [Vercel](https://vercel.com).
 

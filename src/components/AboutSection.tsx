@@ -9,7 +9,7 @@ export default function AboutSection() {
     >
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         {/* Left: Name & Profession */}
-        <div className="flex flex-col gap-2 ">
+        <div className="flex flex-col gap-2 text-base sm:text-lg text-[var(--text-color)] mb-0 leading-relaxed max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0 text-justify ">
           <h1 className="ml-2 text-4xl sm:text-5xl font-extrabold text-[var(--text-color)] mb-1 flex flex-col gap-1">
             Hi, I&apos;m
             <span className="text-[var(--gradient-color)]">Stefan</span>

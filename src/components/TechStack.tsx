@@ -1,9 +1,19 @@
 "use client";
-import techStackData from "@/data/techStackData";
+import techStackData, {
+  TechStackCategory,
+  TechStackItem,
+} from "@/data/techStackData";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { useState } from "react";
 
-function TechStackIcon({ item, isMobile }: { item: any; isMobile: boolean }) {
+// Atomic icon+label component, per card
+function TechStackIcon({
+  item,
+  isMobile,
+}: {
+  item: TechStackItem;
+  isMobile: boolean;
+}) {
   const [hovered, setHovered] = useState(false);
 
   const iconColor = isMobile
@@ -50,7 +60,7 @@ const TechStack = () => {
         </span>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-        {techStackData.map((category, i) => (
+        {techStackData.map((category: TechStackCategory, i) => (
           <div
             key={i}
             className="bg-[var(--card-background-color)] 

@@ -1,3 +1,4 @@
+import { ElementType } from "react";
 import { FaCode, FaTools, FaPaintBrush } from "react-icons/fa";
 import {
   SiGit,
@@ -19,8 +20,21 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 
-// move to /data/techStackData
-const techStackData = [
+// --- Type definitions ---
+export type TechStackItem = {
+  name: string;
+  icon: ElementType;
+  hoverColor: string;
+};
+
+export type TechStackCategory = {
+  title: string;
+  icon: ElementType;
+  items: TechStackItem[];
+};
+
+// --- Data itself ---
+const techStackData: TechStackCategory[] = [
   {
     title: "Languages",
     icon: FaCode,

@@ -63,15 +63,14 @@ html.dark {
   ); /* Vibrant gradient */
 }
 
-
 .card {
   background-color: var(--card-background-color);
   border: 1px solid var(--item-background-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 280px) and (max-width: 500px) {

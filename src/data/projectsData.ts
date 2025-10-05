@@ -3,11 +3,28 @@ type Project = {
   description: string;
   image: string;
   technologies: string[];
-  liveUrl: string;
+  liveUrl?: string;
   githubUrl: string;
 };
 
 const projectsData: Project[] = [
+  {
+    title: "MeowChat: Full-Stack Chat Application",
+    description:
+      "A comprehensive full-stack real-time chat application with end-to-end encryption, built using Node.js, Express, MongoDB, Socket.IO, React, and Vite. Features secure messaging, Firebase authentication, and Meowgram integration.",
+    image:
+      "https://res.cloudinary.com/deccntaym/image/upload/v1759668995/meowchatpl_hxarqh.png",
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "React",
+      "Vite",
+      "Firebase",
+    ],
+    githubUrl: "https://github.com/blagojevics/meowchat",
+  },
   {
     title: "Meowgram - Full-Stack Social App",
     description:
@@ -19,16 +36,6 @@ const projectsData: Project[] = [
     githubUrl: "https://github.com/blagojevics/Meowgram-Social-Media-App",
   },
   {
-    title: "NutriTracker - Nutrition API App",
-    description:
-      "A dynamic, responsive web app that consumes the CalorieNinjas REST API to fetch and display nutritional data based on user queries, built with React.",
-    image:
-      "https://res.cloudinary.com/deccntaym/image/upload/v1758043182/nutritrackerSS_oysqhk.png",
-    technologies: ["React", "REST API", "CSS"],
-    liveUrl: "https://blagojevics.github.io/nutriTracker/",
-    githubUrl: "https://github.com/blagojevics/NutriTracker",
-  },
-  {
     title: "Enigma Bolt System - Static Website",
     description:
       "A fully responsive business website demonstrating foundational web development skills with a focus on semantic HTML and  CSS  layouts.",
@@ -37,6 +44,16 @@ const projectsData: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://blagojevics.github.io/Enigma-Bolt-System/",
     githubUrl: "https://github.com/blagojevics/Enigma-Bolt-System",
+  },
+  {
+    title: "NutriTracker - Nutrition API App",
+    description:
+      "A dynamic, responsive web app that consumes the CalorieNinjas REST API to fetch and display nutritional data based on user queries, built with React.",
+    image:
+      "https://res.cloudinary.com/deccntaym/image/upload/v1758043182/nutritrackerSS_oysqhk.png",
+    technologies: ["React", "REST API", "CSS"],
+    liveUrl: "https://blagojevics.github.io/nutriTracker/",
+    githubUrl: "https://github.com/blagojevics/NutriTracker",
   },
 ];
 

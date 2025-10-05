@@ -1,5 +1,5 @@
 import { ElementType } from "react";
-import { FaCode, FaTools, FaPaintBrush } from "react-icons/fa";
+import { FaCode, FaTools, FaPaintBrush, FaServer } from "react-icons/fa";
 import {
   SiGit,
   SiJavascript,
@@ -18,6 +18,11 @@ import {
   SiAdobephotoshop,
   SiSass,
   SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiSocketdotio,
+  SiVite,
 } from "react-icons/si";
 
 // --- Type definitions ---
@@ -36,7 +41,7 @@ export type TechStackCategory = {
 // --- Data itself ---
 const techStackData: TechStackCategory[] = [
   {
-    title: "Languages",
+    title: "Frontend",
     icon: FaCode,
     items: [
       { name: "JavaScript", icon: SiJavascript, hoverColor: "#f7df1e" },
@@ -50,6 +55,16 @@ const techStackData: TechStackCategory[] = [
     ],
   },
   {
+    title: "Backend",
+    icon: FaServer,
+    items: [
+      { name: "Node.js", icon: SiNodedotjs, hoverColor: "#339933" },
+      { name: "Express.js", icon: SiExpress, hoverColor: "#000000" },
+      { name: "MongoDB", icon: SiMongodb, hoverColor: "#47A248" },
+      { name: "Socket.IO", icon: SiSocketdotio, hoverColor: "#010101" },
+    ],
+  },
+  {
     title: "Software Tools",
     icon: FaTools,
     items: [
@@ -57,7 +72,6 @@ const techStackData: TechStackCategory[] = [
       { name: "Cloudinary", icon: SiCloudinary, hoverColor: "#3448c5" },
       { name: "GitHub", icon: SiGithub, hoverColor: "#181717" },
       { name: "Git", icon: SiGit, hoverColor: "#F1502F" },
-      { name: "npm", icon: SiNpm, hoverColor: "#cb3837" },
     ],
   },
   {

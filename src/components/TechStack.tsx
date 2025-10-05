@@ -34,10 +34,10 @@ function TechStackIcon({
       onMouseLeave={!isMobile ? () => setHovered(false) : undefined}
     >
       <item.icon
-        className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] mb-1 md:mb-2 transition-colors duration-300"
+        className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[28px] md:h-[28px] mb-1 md:mb-2 transition-colors duration-300"
         style={{ color: iconColor }}
       />
-      <span className="text-[11px] sm:text-xs md:text-sm font-medium text-[var(--text-color)]">
+      <span className="text-[10px] sm:text-xs md:text-sm font-medium text-[var(--text-color)]">
         {item.name}
       </span>
     </div>
@@ -51,7 +51,7 @@ const TechStack = () => {
   return (
     <section
       id="techstack"
-      className="w-full max-w-4xl mx-auto py-12 md:py-16 px-2 sm:px-6 bg-[var(--background-color)] transition-colors duration-300"
+      className="w-full max-w-4xl mx-auto py-12 md:py-16 px-2 sm:px-6 bg-[var(--background-color)] transition-colors duration-300 mt-6 md:mt-0"
     >
       <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[var(--text-color)] mb-8 md:mb-12">
         My{" "}
@@ -59,7 +59,7 @@ const TechStack = () => {
           Tech Stack
         </span>
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-8">
         {techStackData.map((category: TechStackCategory, i) => (
           <div
             key={i}

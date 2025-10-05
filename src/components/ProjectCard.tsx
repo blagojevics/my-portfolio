@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <div className="bg-[var(--card-background-color)] rounded-xl border border-[var(--item-background-color)] overflow-hidden shadow hover:shadow-md transition flex flex-col sm:max-w-2xs ">
+    <div className="bg-[var(--card-background-color)] rounded-xl border border-[var(--item-background-color)] overflow-hidden shadow hover:shadow-md transition flex flex-col h-[480px] ">
       {/* Image wrapper */}
       <div
         onClick={() => handleClick(project.liveUrl || project.githubUrl)}
@@ -71,19 +71,20 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       {/* Content */}
-      <div className="p-4 sm:p-3 flex flex-col flex-grow">
+      <div className="p-4 sm:p-3 grid grid-rows-[auto_1fr_auto] gap-2 flex-grow">
         {/* Title */}
-        <h3 className="text-base sm:text-lg font-semibold text-[var(--text-color)] mb-2 cursor-default text-center">
-          {project.title}
-        </h3>
+        <h3
+          className="text-base sm:text-lg font-semibold text-[var(--text-color)] text-center"
+          dangerouslySetInnerHTML={{ __html: project.title }}
+        ></h3>
 
         {/* Description */}
-        <p className=" text-justify text-sm sm:text-base text-[var(--text-color)] mb-4 cursor-default flex  justify-items-center">
+        <p className="text-justify text-sm sm:text-base text-[var(--text-color)]">
           {project.description}
         </p>
 
         {/* Tech stack tags */}
-        <div className="flex flex-wrap gap-2 mt-auto">
+        <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
             <span
               key={tech}

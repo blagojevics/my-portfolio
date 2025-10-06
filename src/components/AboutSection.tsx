@@ -16,7 +16,7 @@ export default function AboutSection() {
             <span className="text-[var(--gradient-color)]">Blagojević</span>
           </h1>
           <h2 className="ml-2 text-[1.2rem] sm:text-2xl font-semibold text-[var(--text-color)] mb-2">
-            Frontend Developer
+            Full Stack Developer
           </h2>
           <h3 className=" ml-2 text-lg font-semibold text-[var(--text-color)] flex gap-1 items-center">
             <FaMapMarkerAlt

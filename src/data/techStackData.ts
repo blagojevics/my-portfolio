@@ -23,6 +23,7 @@ import {
   SiMongodb,
   SiSocketdotio,
   SiVite,
+  SiExpo,
 } from "react-icons/si";
 
 // --- Type definitions ---
@@ -47,6 +48,8 @@ const techStackData: TechStackCategory[] = [
       { name: "JavaScript", icon: SiJavascript, hoverColor: "#f7df1e" },
       { name: "TypeScript", icon: SiTypescript, hoverColor: "#3178c6" },
       { name: "React", icon: SiReact, hoverColor: "#61dafb" },
+      { name: "React Native", icon: SiReact, hoverColor: "#61dafb" },
+      { name: "Expo", icon: SiExpo, hoverColor: "#000020" },
       { name: "Next.js", icon: SiNextdotjs, hoverColor: "#000000" },
       { name: "HTML5", icon: SiHtml5, hoverColor: "#e34f26" },
       { name: "CSS3", icon: SiCss3, hoverColor: "#1572b6" },

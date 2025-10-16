@@ -11,10 +11,10 @@ const projectsData: Project[] = [
   {
     title: "Meowgram - React Native",
     description:
-      "A social media application built with React Native and Expo, featuring user authentication, and cross-platform compatibility for iOS and Android.",
+      "A social media application built with TypeScript, React Native and Expo, featuring user authentication, and cross-platform compatibility for iOS and Android.",
     image:
       "https://res.cloudinary.com/deccntaym/image/upload/v1760622784/Screenshot_2025-10-16_155121_bdttuw.png",
-    technologies: ["React Native", "Expo", "Firebase", "JavaScript"],
+    technologies: ["React Native", "Expo", "Firebase", "TypeScript"],
     githubUrl: "https://github.com/blagojevics/meowgram-mobile-app",
   },
   {

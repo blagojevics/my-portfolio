@@ -51,7 +51,7 @@ const projectsData: Project[] = [
     image:
       "https://res.cloudinary.com/deccntaym/image/upload/v1758043182/nutritrackerSS_oysqhk.png",
     technologies: ["React", "REST API", "CSS"],
-    liveUrl: "https://nutritracker-blagojevics.netlify.app/",
+    liveUrl: "https://blagojevics.github.io/nutriTracker/",
     githubUrl: "https://github.com/blagojevics/NutriTracker",
   },
   {

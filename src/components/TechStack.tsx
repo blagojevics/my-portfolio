@@ -53,7 +53,7 @@ const TechStack = () => {
       id="techstack"
       className="w-full max-w-4xl mx-auto py-12 md:py-16 px-2 sm:px-6 bg-[var(--background-color)] transition-colors duration-300 mt-6 md:mt-0"
     >
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[var(--text-color)] mb-8 md:mb-12">
+      <h2 className="text-3xl font-bold text-center text-[var(--text-color)] mb-8 md:mb-12">
         My{" "}
         <span className="text-[var(--gradient-color)] inline-block">
           Tech Stack

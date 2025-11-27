@@ -1,17 +1,7 @@
-"use client";
-
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-
-type Project = {
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  liveUrl?: string;
-  githubUrl: string;
-};
+import type { Project } from "../types";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const handleClick = (url: string | undefined) => {
@@ -23,7 +13,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <div className="bg-[var(--card-background-color)] rounded-xl border border-[var(--item-background-color)] overflow-hidden shadow hover:shadow-md transition flex flex-col h-[480px] ">
+    <div className="bg-[var(--card-background-color)] rounded-xl border border-[var(--item-background-color)] overflow-hidden shadow hover:shadow-md transition flex flex-col h-[420px] ">
       {/* Image wrapper */}
       <div
         onClick={() => handleClick(project.liveUrl || project.githubUrl)}
@@ -82,18 +72,6 @@ export default function ProjectCard({ project }: { project: Project }) {
         <p className="text-justify text-sm sm:text-base text-[var(--text-color)]">
           {project.description}
         </p>
-
-        {/* Tech stack tags */}
-        <div className="flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="bg-[var(--item-background-color)] text-[var(--text-color)] text-xs font-medium px-2 py-1 rounded hover:bg-[var(--gradient-color)] hover:text-[var(--primary-foreground)] transition"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
       </div>
     </div>
   );
